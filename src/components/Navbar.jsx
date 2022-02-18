@@ -10,7 +10,7 @@ export const Navbar = () => {
             <TopItem>My Starbucks</TopItem>
             <TopItem>Customer Service & Ideas</TopItem>
             <TopItem>Find a Store</TopItem>
-            <SearchImg src="https://image.istarbucks.co.kr/common/img/common/icon_magnifier_black.png"></SearchImg>
+              <SearchImg src="https://image.istarbucks.co.kr/common/img/common/icon_magnifier_black.png"></SearchImg>
           </TopMenuItems>
           <BottomMenuItems>
             <BottomItem>COFFEE</BottomItem>
@@ -28,58 +28,63 @@ export const Navbar = () => {
 
 const Wrapper = styled.div`
   background-color: #f6f5ef;
+  justify-content: space-between;
 `;
 
 const MenubarWrapper = styled.div`
   display: flex;
-  justify-content: space-between;
-  padding: 2vh 20vw;
+  justify-content: center;
 `;
 
 const Logo = styled.img`
   cursor: pointer;
+  object-fit: none;
+  margin-left: 1vw;
 `;
 
-const MenuItemWrapper = styled.div`
+const MenuItemWrapper = styled.nav`
   display: flex;
-  width: 90%;
+  margin-left: 10vw;
   flex-direction: column;
-  justify-content: space-around;
 `;
 
-const TopMenuItems = styled.div`
+const TopMenuItems = styled.ul`
+  position: relative;
   display: flex;
+  list-style: none;
   justify-content: flex-end;
-  margin-left: 10vw;
-  width: 82%;
+  align-items: center;
+  margin: 1vh 3vw 1vh 0;
 `;
 
-const BottomMenuItems = styled.div`
-  display: flex;
-  justify-content: space-between;
-  margin-left: 10vw;
-  width: 80%;
-`;
-
-const TopItem = styled.div`
+const TopItem = styled.li`
   padding: 0 1vw;
   font-size: 12px;
-  margin-bottom: 1vh;
   cursor: pointer;
   :hover {
     text-decoration: underline;
   }
 `;
+
 const SearchImg = styled.img`
-  padding: 0 1vw;
+  padding: 5px 5px;
   cursor: pointer;
-  margin-bottom: 1vh;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: white;
 `;
 
-const BottomItem = styled.button`
+const BottomMenuItems = styled.ul`
+  display: flex;
+  list-style: none;
+  margin: 0;
+  justify-content: flex-end;
+  box-sizing: border-box;
+`;
+
+const BottomItem = styled.li`
   font-size: 14px;
-  padding-top: 5px;
-  padding-bottom: 20px;
+  padding: 1vh 1.5vw 4vh 1.5vw;
   cursor: pointer;
   :hover {
     text-decoration: underline;
