@@ -1,39 +1,68 @@
 import styled from "@emotion/styled";
+import { useState } from "react";
+import { DropDown } from "./DropdownContent";
 export const Navbar = () => {
+  const [display, setDisplay] = useState("");
   return (
     <Wrapper>
-      <MenubarWrapper>
-        <Logo src="https://www.starbucks.co.kr/common/img/common/logo.png" />
-        <MenuItemWrapper>
-          <TopMenuItems>
-            <TopItem>Sign in</TopItem>
-            <TopItem>My Starbucks</TopItem>
-            <TopItem>Customer Service & Ideas</TopItem>
-            <TopItem>Find a Store</TopItem>
-              <SearchImg src="https://image.istarbucks.co.kr/common/img/common/icon_magnifier_black.png"></SearchImg>
-          </TopMenuItems>
-          <BottomMenuItems>
-            <BottomItem>COFFEE</BottomItem>
-            <BottomItem>MENU</BottomItem>
-            <BottomItem>STORE</BottomItem>
-            <BottomItem>RESPONSIBILITY</BottomItem>
-            <BottomItem>STARBUCKS REWARDS</BottomItem>
-            <BottomItem>WHAT'S NEW</BottomItem>
-          </BottomMenuItems>
-        </MenuItemWrapper>
-      </MenubarWrapper>
+      <Logo src="https://www.starbucks.co.kr/common/img/common/logo.png" />
+      <MenuItemWrapper>
+        <TopMenuItems>
+          <TopItem>Sign in</TopItem>
+          <TopItem>My Starbucks</TopItem>
+          <TopItem>Customer Service & Ideas</TopItem>
+          <TopItem>Find a Store</TopItem>
+          <SearchImg src="https://image.istarbucks.co.kr/common/img/common/icon_magnifier_black.png"></SearchImg>
+        </TopMenuItems>
+        <BottomMenuItems>
+          <BottomItem
+            onMouseOver={() => setDisplay(0)}
+            onMouseOut={() => setDisplay("")}
+          >
+            COFFEE
+          </BottomItem>
+          <BottomItem
+            onMouseOver={() => setDisplay(1)}
+            onMouseOut={() => setDisplay("")}
+          >
+            MENU
+          </BottomItem>
+          <BottomItem
+            onMouseOver={() => setDisplay(2)}
+            onMouseOut={() => setDisplay("")}
+          >
+            STORE
+          </BottomItem>
+          <BottomItem
+            onMouseOver={() => setDisplay(3)}
+            onMouseOut={() => setDisplay("")}
+          >
+            RESPONSIBILITY
+          </BottomItem>
+          <BottomItem
+            onMouseOver={() => setDisplay(4)}
+            onMouseOut={() => setDisplay("")}
+          >
+            STARBUCKS REWARDS
+          </BottomItem>
+          <BottomItem
+            onMouseOver={() => setDisplay(5)}
+            onMouseOut={() => setDisplay("")}
+          >
+            WHAT'S NEW
+          </BottomItem>
+        </BottomMenuItems>
+      </MenuItemWrapper>
+      <DropDown index={display}/>
     </Wrapper>
   );
 };
 
 const Wrapper = styled.div`
-  background-color: #f6f5ef;
-  justify-content: space-between;
-`;
-
-const MenubarWrapper = styled.div`
   display: flex;
+  background-color: #f6f5ef;
   justify-content: center;
+  height: 12vh;
 `;
 
 const Logo = styled.img`
@@ -89,7 +118,7 @@ const BottomItem = styled.li`
   :hover {
     text-decoration: underline;
     color: #50995b;
-    background-color: #46474d;
+    background-color: #2c2a29;
   }
   border: 0;
   outline: 0;
