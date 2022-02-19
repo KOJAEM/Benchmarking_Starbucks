@@ -2,7 +2,7 @@ import styled from "@emotion/styled";
 import { useState } from "react";
 import { DropDown } from "./DropdownContent";
 export const Navbar = () => {
-  const [display, setDisplay] = useState("");
+  const [dropdown, setDropdown] = useState("");
   return (
     <Wrapper>
       <Logo src="https://www.starbucks.co.kr/common/img/common/logo.png" />
@@ -16,44 +16,44 @@ export const Navbar = () => {
         </TopMenuItems>
         <BottomMenuItems>
           <BottomItem
-            onMouseOver={() => setDisplay(0)}
-            onMouseOut={() => setDisplay("")}
+            onMouseOver={() => setDropdown("coffee")}
+            onMouseOut={() => setDropdown("")}
           >
             COFFEE
           </BottomItem>
           <BottomItem
-            onMouseOver={() => setDisplay(1)}
-            onMouseOut={() => setDisplay("")}
+            onMouseOver={() => setDropdown("menu")}
+            onMouseOut={() => setDropdown("")}
           >
             MENU
           </BottomItem>
           <BottomItem
-            onMouseOver={() => setDisplay(2)}
-            onMouseOut={() => setDisplay("")}
+            onMouseOver={() => setDropdown("store")}
+            onMouseOut={() => setDropdown("")}
           >
             STORE
           </BottomItem>
           <BottomItem
-            onMouseOver={() => setDisplay(3)}
-            onMouseOut={() => setDisplay("")}
+            onMouseOver={() => setDropdown("responsibility")}
+            onMouseOut={() => setDropdown("")}
           >
             RESPONSIBILITY
           </BottomItem>
           <BottomItem
-            onMouseOver={() => setDisplay(4)}
-            onMouseOut={() => setDisplay("")}
+            onMouseOver={() => setDropdown("starbucksRewards")}
+            onMouseOut={() => setDropdown("")}
           >
             STARBUCKS REWARDS
           </BottomItem>
           <BottomItem
-            onMouseOver={() => setDisplay(5)}
-            onMouseOut={() => setDisplay("")}
+            onMouseOver={() => setDropdown("whatsNew")}
+            onMouseOut={() => setDropdown("")}
           >
             WHAT'S NEW
           </BottomItem>
         </BottomMenuItems>
       </MenuItemWrapper>
-      <DropDown index={display}/>
+      <DropDown dropdown={dropdown} />
     </Wrapper>
   );
 };
@@ -62,7 +62,7 @@ const Wrapper = styled.div`
   display: flex;
   background-color: #f6f5ef;
   justify-content: center;
-  height: 12vh;
+  height: 120px;
 `;
 
 const Logo = styled.img`
@@ -105,6 +105,8 @@ const SearchImg = styled.img`
 
 const BottomMenuItems = styled.ul`
   display: flex;
+  height: 100%;
+  align-items: center;
   list-style: none;
   margin: 0;
   justify-content: flex-end;
@@ -113,7 +115,8 @@ const BottomMenuItems = styled.ul`
 
 const BottomItem = styled.li`
   font-size: 14px;
-  padding: 1vh 1.5vw 4vh 1.5vw;
+  padding: 1vh 1.5vw 0 1.5vw;
+  height: 100%;
   cursor: pointer;
   :hover {
     text-decoration: underline;
