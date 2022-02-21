@@ -1,9 +1,7 @@
-// 조건부 렌더링
-
 import styled from "@emotion/styled";
 import { DropdownItem } from './DropdownItem';
 
-export const DropDown = ({ dropdown }) => {
+export const DropdownContent = ({ dropdown }) => {
   return (
     <>
         <Wrapper>

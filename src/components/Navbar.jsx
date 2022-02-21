@@ -1,6 +1,6 @@
 import styled from "@emotion/styled";
 import { useState } from "react";
-import { DropDown } from "./DropdownContent";
+import { DropdownContent } from "./DropdownContent";
 export const Navbar = () => {
   const [dropdown, setDropdown] = useState("");
   return (
@@ -53,7 +53,7 @@ export const Navbar = () => {
           </BottomItem>
         </BottomMenuItems>
       </MenuItemWrapper>
-      <DropDown dropdown={dropdown} />
+      <DropdownContent dropdown={dropdown} />
     </Wrapper>
   );
 };

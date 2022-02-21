@@ -10,37 +10,40 @@ import {
 
 export const DropdownItem = ({ name }) => {
   let display;
-  if (name === "coffee") display = coffee;
-  if (name === "menu") display = menu;
-  if (name === "store") display = store;
-  if (name === "responsibility") display = responsibility;
-  if (name === "starbucksRewards") display = starbucksRewards;
-  if (name === "whatsNew") display = whatsNew;
+  switch (name) {
+    case "coffee":
+      display = coffee;
+      break;
+    case "menu":
+      display = menu;
+      break;
+    case "store":
+      display = store;
+      break;
+    case "responsibility":
+      display = responsibility;
+      break;
+    case "starbucksRewards":
+      display = starbucksRewards;
+      break;
+    case "whatsNew":
+      display = whatsNew;
+      break;
+    // no default
+  } 
+
 
   const getList = index => {
-    const amount = display.itemAmount[index];
-    const list = [];
-    let count = 0;
-
-    for (let i = 0; i < index; i++) {
-      count += display.itemAmount[i];
-    }
-
-    if (display) {
-      for (let j = count; j < count + display.itemAmount[index]; j++) {
-        list.push(display.titleItem[j]);
-      }
-      count += display.itemAmount[amount];
-    }
     return (
       <>
-        {list.map(data => (
-          <Item key={data}>
+        {display.titleItem[index].map((data, index) => (
+          <Item key={index}>
             <Text>{data}</Text>
           </Item>
         ))}
       </>
     );
+    
   };
 
 
@@ -50,7 +53,7 @@ export const DropdownItem = ({ name }) => {
       {display ? (
         <>
           {display.title.map((data, index) => (
-            <Wrapper key={data}>
+            <Wrapper key={index}>
               <Title>
                 <Text>{data}</Text>
               </Title>
