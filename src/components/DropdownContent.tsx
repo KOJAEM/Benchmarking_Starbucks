@@ -1,14 +1,17 @@
 import styled from "@emotion/styled";
-import { DropdownItem } from './DropdownItem';
+import { DropdownItem } from "./DropdownItem";
 
-export const DropdownContent = ({ dropdown }) => {
+type Props = {
+  dropdown: string;
+};
+export const DropdownContent = ({ dropdown }: Props) => {
   return (
     <>
-        <Wrapper>
-          <ContentWrapper>
-            <DropdownItem name={dropdown}/>
-          </ContentWrapper>
-        </Wrapper>
+      <Wrapper>
+        <ContentWrapper>
+          <DropdownItem name={dropdown} />
+        </ContentWrapper>
+      </Wrapper>
     </>
   );
 };
@@ -29,5 +32,3 @@ const ContentWrapper = styled.div`
   justify-content: flex-start;
   margin-left: 15vw;
 `;
-
-

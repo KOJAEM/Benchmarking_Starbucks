@@ -7,9 +7,15 @@ import {
   starbucksRewards,
   whatsNew,
 } from "../dummy/DropdownContents";
-
-export const DropdownItem = ({ name }) => {
-  let display;
+type Props = {
+  name: string;
+};
+type displayType = {
+  title: string[];
+  titleItem: string[][];
+};
+export const DropdownItem = ({ name }: Props) => {
+  let display: displayType | null = null;
   switch (name) {
     case "coffee":
       display = coffee;
@@ -30,29 +36,28 @@ export const DropdownItem = ({ name }) => {
       display = whatsNew;
       break;
     // no default
-  } 
+  }
 
-
-  const getList = index => {
+  const getList = (index: number) => {
+    if(!display){
+      return;
+    }
     return (
       <>
-        {display.titleItem[index].map((data, index) => (
+        {display.titleItem[index].map((data: string, index: number) => (
           <Item key={index}>
             <Text>{data}</Text>
           </Item>
         ))}
       </>
     );
-    
   };
-
-
 
   return (
     <>
       {display ? (
         <>
-          {display.title.map((data, index) => (
+          {display.title.map((data: string, index: number) => (
             <Wrapper key={index}>
               <Title>
                 <Text>{data}</Text>

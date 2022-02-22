@@ -1,4 +1,8 @@
-export const coffee = {
+type Topic = {
+  title: string[],
+  titleItem: string[][],
+}
+export const coffee: Topic = {
   title: [
     "커피",
     "나와 어울리는 커피",
@@ -37,7 +41,7 @@ export const coffee = {
   ],
 };
 
-export const menu = {
+export const menu: Topic = {
   title: ["음료", "푸드", "상품", "카드", "메뉴 이야기"],
   titleItem: [
     [
@@ -75,7 +79,7 @@ export const menu = {
   ],
 };
 
-export const store = {
+export const store: Topic = {
   title: [
     "매장 찾기",
     "드라이브 스루 매장",
@@ -86,7 +90,7 @@ export const store = {
   titleItem: [["퀵 검색", "지역 검색"], [], [], [], ["티바나 바 매장"]],
 };
 
-export const responsibility = {
+export const responsibility: Topic = {
   title: [
     "사회공헌 캠페인 소개",
     "지역 사회 참여 활동",
@@ -110,7 +114,7 @@ export const responsibility = {
   ],
 };
 
-export const starbucksRewards = {
+export const starbucksRewards: Topic = {
   title: ["스타벅스 리워드", "스타벅스 카드", "스타벅스 e-Gift Card"],
   titleItem: [
     ["스타벅스 리워드 소개", "등급 및 혜택", "스타벅스 별", "자주 하는 질문"],
@@ -126,7 +130,7 @@ export const starbucksRewards = {
   ],
 };
 
-export const whatsNew = {
+export const whatsNew: Topic = {
   title: ["이벤트", "뉴스", "매장별 이벤트", "공지사항", "월페이퍼"],
   titleItem: [
     ["전체", "스타벅스 카드", "스타벅스 리워드", "온라인"],
@@ -141,5 +145,4 @@ export const whatsNew = {
     [],
     [],
   ],
-  itemAmount: [4, 5, 2, 0, 0],
 };

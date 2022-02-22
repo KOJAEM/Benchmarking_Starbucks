@@ -1,5 +1,5 @@
-import styled from '@emotion/styled';
-import './App.css';
+import styled from "@emotion/styled";
+import "./App.css";
 import { Navbar } from "./components/Navbar";
 
 function App() {
@@ -15,4 +15,4 @@ export default App;
 const Wrapper = styled.div`
   width: 100%;
   height: 100vh;
-`
+`;
