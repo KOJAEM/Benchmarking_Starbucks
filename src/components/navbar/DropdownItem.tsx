@@ -6,7 +6,7 @@ import {
   responsibility,
   starbucksRewards,
   whatsNew,
-} from "../dummy/DropdownContents";
+} from "../../dummy/DropdownContents";
 type Props = {
   name: string;
 };
