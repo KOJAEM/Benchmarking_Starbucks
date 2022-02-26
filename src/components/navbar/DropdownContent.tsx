@@ -9,7 +9,7 @@ export const DropdownContent = ({ dropdown }: Props) => {
     <>
       <Wrapper>
         <ContentWrapper>
-          <DropdownItem name={dropdown} />
+          <DropdownItem dropdown={dropdown} />
         </ContentWrapper>
       </Wrapper>
     </>
@@ -18,12 +18,12 @@ export const DropdownContent = ({ dropdown }: Props) => {
 
 const Wrapper = styled.div`
   width: 100%;
-  display: flex;
+  display: block;
   justify-content: center;
   background-color: #2c2a29;
-  // position 과 top 은 실험용 코드
   position: absolute;
   top: 120px;
+  z-index: 999;
 `;
 const ContentWrapper = styled.div`
   width: 80%;

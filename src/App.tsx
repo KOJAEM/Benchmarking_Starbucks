@@ -1,11 +1,14 @@
 import styled from "@emotion/styled";
 import "./App.css";
+import { MainVisual } from './components/mainVisual/MainVisual';
 import { Navbar } from "./components/navbar/Navbar";
+
 
 function App() {
   return (
     <Wrapper>
       <Navbar />
+      <MainVisual />
     </Wrapper>
   );
 }

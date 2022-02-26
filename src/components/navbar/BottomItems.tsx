@@ -3,46 +3,24 @@ type Props = {
     setDropdown : React.Dispatch<React.SetStateAction<string>>
 }
 export function BottomItems({setDropdown}:Props) {
-    return (      
-    <BottomMenuWrapper>
-      <BottomItem
-        onMouseOver={() => setDropdown("coffee")}
-        onMouseOut={() => setDropdown("")}
-      >
-        COFFEE
-      </BottomItem>
-      <BottomItem
-        onMouseOver={() => setDropdown("menu")}
-        onMouseOut={() => setDropdown("")}
-      >
-        MENU
-      </BottomItem>
-      <BottomItem
-        onMouseOver={() => setDropdown("store")}
-        onMouseOut={() => setDropdown("")}
-      >
-        STORE
-      </BottomItem>
-      <BottomItem
-        onMouseOver={() => setDropdown("responsibility")}
-        onMouseOut={() => setDropdown("")}
-      >
-        RESPONSIBILITY
-      </BottomItem>
-      <BottomItem
-        onMouseOver={() => setDropdown("starbucksRewards")}
-        onMouseOut={() => setDropdown("")}
-      >
-        STARBUCKS REWARDS
-      </BottomItem>
-      <BottomItem
-        onMouseOver={() => setDropdown("whatsNew")}
-        onMouseOut={() => setDropdown("")}
-      >
-        WHAT'S NEW
-      </BottomItem>
-    </BottomMenuWrapper>
-    )
+    return (
+      <BottomMenuWrapper onMouseOut={() => setDropdown("")}>
+        <BottomItem onMouseOver={() => setDropdown("coffee")}>
+          COFFEE
+        </BottomItem>
+        <BottomItem onMouseOver={() => setDropdown("menu")}>MENU</BottomItem>
+        <BottomItem onMouseOver={() => setDropdown("store")}>STORE</BottomItem>
+        <BottomItem onMouseOver={() => setDropdown("responsibility")}>
+          RESPONSIBILITY
+        </BottomItem>
+        <BottomItem onMouseOver={() => setDropdown("starbucksRewards")}>
+          STARBUCKS REWARDS
+        </BottomItem>
+        <BottomItem onMouseOver={() => setDropdown("whatsNew")}>
+          WHAT'S NEW
+        </BottomItem>
+      </BottomMenuWrapper>
+    );
 }
 
 
@@ -61,6 +39,7 @@ const BottomItem = styled.li`
   padding: 1vh 1.5vw 0 1.5vw;
   height: 100%;
   cursor: pointer;
+  box-sizing: border-box;
   :hover {
     text-decoration: underline;
     color: #50995b;

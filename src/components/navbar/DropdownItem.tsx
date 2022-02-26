@@ -8,15 +8,15 @@ import {
   whatsNew,
 } from "../../dummy/DropdownContents";
 type Props = {
-  name: string;
+  dropdown: string;
 };
 type displayType = {
   title: string[];
   titleItem: string[][];
 };
-export const DropdownItem = ({ name }: Props) => {
+export const DropdownItem = ({ dropdown }: Props) => {
   let display: displayType | null = null;
-  switch (name) {
+  switch (dropdown) {
     case "coffee":
       display = coffee;
       break;

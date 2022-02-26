@@ -22,6 +22,7 @@ const Wrapper = styled.div`
   background-color: #f6f5ef;
   justify-content: center;
   height: 120px;
+  z-index: 99;
 `;
 
 const Logo = styled.img`
