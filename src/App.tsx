@@ -2,6 +2,7 @@ import styled from "@emotion/styled";
 import "./App.css";
 import { MainVisual } from './components/mainVisual/MainVisual';
 import { Navbar } from "./components/navbar/Navbar";
+import { LineNotice } from './components/lineNotice/LineNotice';
 
 
 function App() {
@@ -9,6 +10,7 @@ function App() {
     <Wrapper>
       <Navbar />
       <MainVisual />
+      <LineNotice />
     </Wrapper>
   );
 }

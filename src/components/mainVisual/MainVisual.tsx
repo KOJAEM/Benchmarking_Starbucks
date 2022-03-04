@@ -90,6 +90,7 @@ const Product1 = styled.div`
   left: 22%;
   width: 49%;
   max-width: 550px;
+  z-index: 8;
 `;
 
 const Product2 = styled.div`
@@ -98,6 +99,7 @@ const Product2 = styled.div`
   left: 39.6%;
   width: 53%;
   max-width: 594px;
+  z-index: 7;
 `;
 
 const Product3 = styled.div`
@@ -106,4 +108,5 @@ const Product3 = styled.div`
   right: -11.2%;
   width: 38%;
   max-width: 425px;
+  z-index: 9;
 `;
