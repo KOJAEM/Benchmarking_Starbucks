@@ -3,6 +3,7 @@ import "./App.css";
 import { MainVisual } from './components/mainVisual/MainVisual';
 import { Navbar } from "./components/navbar/Navbar";
 import { LineNotice } from './components/lineNotice/LineNotice';
+import { Rewards } from './components/rewards/Rewards';
 
 
 function App() {
@@ -11,6 +12,7 @@ function App() {
       <Navbar />
       <MainVisual />
       <LineNotice />
+      <Rewards />
     </Wrapper>
   );
 }
