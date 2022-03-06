@@ -9,13 +9,12 @@ export function Rewards() {
         </LogoWrapper>
         <Contents>
           <RewardInfo>
-            <Title>스타벅스만의 특별한 혜택, 스타벅스 리워드</Title>
+            <Title>스타벅스만의 특별한 혜택, <Strong>스타벅스 리워드</Strong></Title>
             <BottomInfo>
-              <h3 style={{ margin: "0 0 " }}>
-                스타벅스 회원이세요? 로그인을 통해 나만의 리워드를 확인해보세요.
-                <br />
-                스타벅스 회원이 아니세요? 가입을 통해 리워드 혜택을 즐기세요.
-              </h3>
+              <Strong>스타벅스 회원이세요? </Strong>
+              로그인을 통해 나만의 리워드를 확인해보세요.
+              <br />
+              <Strong>스타벅스 회원이 아니세요? </Strong>가입을 통해 리워드 혜택을 즐기세요.
               <ButtonsWrapper>
                 <button
                   style={{
@@ -38,11 +37,12 @@ export function Rewards() {
             </BottomInfo>
           </RewardInfo>
           <GiftInfo>
-            <p style={{ fontWeight: "bold", fontSize: "14px", margin: "0" }}>
-              회원 가입 후, 스타벅스 e-Gift Card를 "나에게 선물하기"로
-              구매하시고, 편리하게 등록하세요!
-              <br /> 카드를 등록하여 스타벅스 리워드 회원이 되신 후, 첫 구매를
-              하시면 무료 음료쿠폰을 드립니다!
+            <p style={{ fontSize: "14px", margin: "0" }}>
+              회원 가입 후, 스타벅스 e-Gift Card를 <h4 style={{display: 'contents'}}>"나에게 선물하기"로
+              구매하시고, 편리하게 등록하세요!</h4>
+              <br />
+              카드를 등록하여 스타벅스 리워드 회원이 되신 후, 첫 구매를 하시면
+              무료 음료쿠폰을 드립니다!
             </p>
             <GiftButton>e-Gift Card 선물하기</GiftButton>
           </GiftInfo>
@@ -64,7 +64,7 @@ const Wrapper = styled.div`
 const ContentsWrapper = styled.div`
   display: flex;
   justify-content: center;
-  width: 75%;
+  width: 1080px;
 `;
 
 const LogoWrapper = styled.div`
@@ -81,10 +81,8 @@ const Logo = styled.img`
 const Contents = styled.div`
   box-sizing: border-box;
   float: left;
-  width: 80%;
-  padding-right: 30px;
   color: #fff;
-  letter-spacing: 0.5px; // 글자 사이 간격 조절
+  width: 100%;
 `;
 
 const RewardInfo = styled.div`
@@ -97,7 +95,6 @@ const Title = styled.h2`
   line-height: 1.4;
   margin-bottom: 12px;
   font-size: 26px;
-  font-weight: bold;
   margin-top: 0;
 `;
 
@@ -109,6 +106,7 @@ const BottomInfo = styled.div`
 
 const ButtonsWrapper = styled.div`
   display: flex;
+  align-items: center;
   button {
     box-sizing: border-box;
     display: inline-block;
@@ -121,11 +119,13 @@ const ButtonsWrapper = styled.div`
     color: #fff;
     border-radius: 5px;
     cursor: pointer;
+    overflow: hidden;
   }
 `;
 
 const GiftInfo = styled.div`
   display: flex;
+  align-items: center;
   justify-content: space-between;
 `;
 
@@ -143,4 +143,9 @@ const GiftButton = styled.button`
   display: flex;
   justify-content: center;
   align-items: center;
+  overflow: hidden;
 `;
+
+const Strong = styled.h3`
+  display: contents;
+`

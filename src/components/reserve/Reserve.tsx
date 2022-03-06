@@ -33,16 +33,32 @@ const Title = styled.div`
   position: relative;
   padding-top: 82px;
   max-width: 1080px;
-  margin-left: 15%;
   box-sizing: border-box;
+  margin: 0 auto;
   z-index: 10;
 `;
 
 const ReserveVisual = styled.div`
-    position: absolute;
-    left: -10%;
-    bottom: 0;
-    z-index: 1;
+  position: absolute;
+  right: -5%;
+  bottom: 0;
+  z-index: 1;
+  @media screen and (max-width: 1800px) {
+    right: -12.5%;
+  }
+  @media screen and (max-width: 1600px) {
+    right: -20%;
+  }
+  @media screen and (max-width: 1400px) {
+    right: -28.5%;
+  }
+  @media screen and (max-width: 1120px) {
+    right: -49%;
+    bottom: -6%;
+  }
+  @media screen and (max-width: 980px) {
+    right: -62%;
+  }
 `;
 
 // const Button = styled.button`
