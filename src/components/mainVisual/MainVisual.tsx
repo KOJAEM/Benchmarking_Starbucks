@@ -55,14 +55,17 @@ const TextImageWrapper = styled.div`
 
 const ButtonWrapper = styled.div`
 position: absolute;
+display: flex;
+justify-content: center;
   top: 39%;
   left: 7px;
   width: 355px;
 `;
 
-const DetailButton = styled.div`
+const DetailButton = styled.button`
   width: 129px;
   margin: 0 auto;
+  background: transparent;
   color: #e95a87;
   border: 2px solid #e95a87;
   font-size: 15px;

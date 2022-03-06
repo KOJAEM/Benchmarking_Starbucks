@@ -17,19 +17,34 @@ export function Rewards() {
                 스타벅스 회원이 아니세요? 가입을 통해 리워드 혜택을 즐기세요.
               </h3>
               <ButtonsWrapper>
-                {/* <button>회원가입</button> */}
-                {/* <button>로그인</button> */}
+                <button
+                  style={{
+                    backgroundColor: "#00704a",
+                    border: "2px solid #00704a",
+                  }}
+                >
+                  회원가입
+                </button>
+                <button
+                  style={{
+                    marginLeft: "9px",
+                    backgroundColor: "transparent",
+                    border: "2px solid #fff",
+                  }}
+                >
+                  로그인
+                </button>
               </ButtonsWrapper>
             </BottomInfo>
           </RewardInfo>
           <GiftInfo>
-            <p style={{ fontWeight: "bold", fontSize: "16px", margin: "0" }}>
+            <p style={{ fontWeight: "bold", fontSize: "14px", margin: "0" }}>
               회원 가입 후, 스타벅스 e-Gift Card를 "나에게 선물하기"로
               구매하시고, 편리하게 등록하세요!
               <br /> 카드를 등록하여 스타벅스 리워드 회원이 되신 후, 첫 구매를
               하시면 무료 음료쿠폰을 드립니다!
             </p>
-            {/* <button>e-Gift Card 선물하기</button> */}
+            <GiftButton>e-Gift Card 선물하기</GiftButton>
           </GiftInfo>
         </Contents>
       </ContentsWrapper>
@@ -49,7 +64,7 @@ const Wrapper = styled.div`
 const ContentsWrapper = styled.div`
   display: flex;
   justify-content: center;
-  width: 70%;
+  width: 75%;
 `;
 
 const LogoWrapper = styled.div`
@@ -92,16 +107,40 @@ const BottomInfo = styled.div`
   margin-bottom: 12px;
 `;
 
-const Comment = styled.h3`
-`;
-
 const ButtonsWrapper = styled.div`
   display: flex;
+  button {
+    box-sizing: border-box;
+    display: inline-block;
+    font-weight: bold;
+    height: 38px;
+    line-height: 36px;
+    padding-left: 18.5px;
+    padding-right: 18.5px;
+    font-size: 14px;
+    color: #fff;
+    border-radius: 5px;
+    cursor: pointer;
+  }
 `;
-
-// 버튼 보류 (아토믹디자인 쓸거임)
 
 const GiftInfo = styled.div`
   display: flex;
   justify-content: space-between;
+`;
+
+const GiftButton = styled.button`
+  box-sizing: border-box;
+  width: 183px;
+  height: 38px;
+  line-height: 36px;
+  font-size: 14px;
+  border: 2px solid #fff;
+  border-radius: 5px;
+  color: white;
+  background: transparent;
+  font-weight: bold;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 `;
