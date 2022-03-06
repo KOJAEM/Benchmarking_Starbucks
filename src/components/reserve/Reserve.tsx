@@ -1,0 +1,53 @@
+import styled from '@emotion/styled';
+
+export function Reserve() {
+    return (
+      <Wrapper>
+        <Contents>
+          <Title>
+            <img src="https://image.istarbucks.co.kr/upload/common/img/main/2022/reserve_2022_ethiopia_title.png" alt='title'/>
+          </Title>
+          {/* <Button>자세히 보기</Button> */}
+          <ReserveVisual>
+              <img src='https://image.istarbucks.co.kr/upload/common/img/main/2022/reserve_2022_ethiopia_visual.jpg' alt='visual' />
+          </ReserveVisual>
+        </Contents>
+      </Wrapper>
+    );
+}
+
+const Wrapper = styled.div`
+  height: 400px;
+  background: url(https://image.istarbucks.co.kr/upload/common/img/main/2022/reserve_2022_ethiopia_visual_bg.jpg) no-repeat center top;
+  background-size: cover;
+  overflow: hidden;
+  position: relative;
+`;
+
+const Contents = styled.div`
+  width: 100%;
+  height: 100%;
+`;
+
+const Title = styled.div`
+  position: relative;
+  padding-top: 82px;
+  max-width: 1080px;
+  margin-left: 15%;
+  box-sizing: border-box;
+  z-index: 10;
+`;
+
+const ReserveVisual = styled.div`
+    position: absolute;
+    left: -10%;
+    bottom: 0;
+    z-index: 1;
+`;
+
+// const Button = styled.button`
+//   position: relative;
+//   z-index: 10;
+//   margin-left: 35%;
+//   margin-top: 23px;
+// `;

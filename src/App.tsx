@@ -4,6 +4,8 @@ import { MainVisual } from './components/mainVisual/MainVisual';
 import { Navbar } from "./components/navbar/Navbar";
 import { LineNotice } from './components/lineNotice/LineNotice';
 import { Rewards } from './components/rewards/Rewards';
+import { MainBean } from './components/mainBean/MainBean';
+import { Reserve } from "./components/reserve/Reserve";
 
 
 function App() {
@@ -13,6 +15,8 @@ function App() {
       <MainVisual />
       <LineNotice />
       <Rewards />
+      <MainBean />
+      <Reserve />
     </Wrapper>
   );
 }
