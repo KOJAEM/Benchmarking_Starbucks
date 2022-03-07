@@ -30,6 +30,7 @@ export function MainVisual() {
 }
 
 const Wrapper = styled.div`
+  /* padding-top: 120px; */
   background: url("https://image.istarbucks.co.kr/upload/common/img/main/2022/2022_Spring_main_bg.jpg");
   background-position: center;
   background-repeat: no-repeat;

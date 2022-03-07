@@ -6,6 +6,7 @@ import { LineNotice } from './components/lineNotice/LineNotice';
 import { Rewards } from './components/rewards/Rewards';
 import { MainBean } from './components/mainBean/MainBean';
 import { Reserve } from "./components/reserve/Reserve";
+import { Favorites } from './components/favorites/Favorites';
 
 
 function App() {
@@ -17,6 +18,7 @@ function App() {
       <Rewards />
       <MainBean />
       <Reserve />
+      <Favorites />
     </Wrapper>
   );
 }
@@ -26,4 +28,5 @@ export default App;
 const Wrapper = styled.div`
   width: 100%;
   height: 100vh;
+  overflow-x: hidden;
 `;

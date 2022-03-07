@@ -109,7 +109,6 @@ const ButtonsWrapper = styled.div`
   align-items: center;
   button {
     box-sizing: border-box;
-    display: inline-block;
     font-weight: bold;
     height: 38px;
     line-height: 36px;
@@ -120,6 +119,9 @@ const ButtonsWrapper = styled.div`
     border-radius: 5px;
     cursor: pointer;
     overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
 `;
 
@@ -143,6 +145,7 @@ const GiftButton = styled.button`
   display: flex;
   justify-content: center;
   align-items: center;
+  cursor: pointer;
   overflow: hidden;
 `;
 

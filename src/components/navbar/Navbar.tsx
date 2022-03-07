@@ -18,6 +18,8 @@ export const Navbar = () => {
 };
 
 const Wrapper = styled.div`
+  /* position: fixed; */
+  width:100%;
   display: flex;
   background-color: #f6f5ef;
   justify-content: center;
