@@ -9,12 +9,15 @@ export function Rewards() {
         </LogoWrapper>
         <Contents>
           <RewardInfo>
-            <Title>스타벅스만의 특별한 혜택, <Strong>스타벅스 리워드</Strong></Title>
+            <Title>
+              스타벅스만의 특별한 혜택, <>스타벅스 리워드</>
+            </Title>
             <BottomInfo>
               <Strong>스타벅스 회원이세요? </Strong>
               로그인을 통해 나만의 리워드를 확인해보세요.
               <br />
-              <Strong>스타벅스 회원이 아니세요? </Strong>가입을 통해 리워드 혜택을 즐기세요.
+              <Strong>스타벅스 회원이 아니세요? </Strong>가입을 통해 리워드
+              혜택을 즐기세요.
               <ButtonsWrapper>
                 <button
                   style={{
@@ -37,13 +40,15 @@ export function Rewards() {
             </BottomInfo>
           </RewardInfo>
           <GiftInfo>
-            <p style={{ fontSize: "14px", margin: "0" }}>
-              회원 가입 후, 스타벅스 e-Gift Card를 <h4 style={{display: 'contents'}}>"나에게 선물하기"로
-              구매하시고, 편리하게 등록하세요!</h4>
+            <div style={{ fontSize: "14px", margin: "0" }}>
+              회원 가입 후, 스타벅스 e-Gift Card를{" "}
+              <h4 style={{ display: "contents" }}>
+                "나에게 선물하기"로 구매하시고, 편리하게 등록하세요!
+              </h4>
               <br />
               카드를 등록하여 스타벅스 리워드 회원이 되신 후, 첫 구매를 하시면
               무료 음료쿠폰을 드립니다!
-            </p>
+            </div>
             <GiftButton>e-Gift Card 선물하기</GiftButton>
           </GiftInfo>
         </Contents>
@@ -91,7 +96,7 @@ const RewardInfo = styled.div`
   border-bottom: 1px solid #4b615b;
 `;
 
-const Title = styled.h2`
+const Title = styled.div`
   line-height: 1.4;
   margin-bottom: 12px;
   font-size: 26px;
@@ -151,4 +156,4 @@ const GiftButton = styled.button`
 
 const Strong = styled.h3`
   display: contents;
-`
+`;
