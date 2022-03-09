@@ -1,7 +1,11 @@
-type Topic = {
-  title: string[],
-  titleItem: string[][],
-}
+export type Topic = {
+  title: string[];
+  titleItem: string[][];
+  subInfo?: {
+    title: string[];
+    titleItem: string[];
+  };
+};
 export const coffee: Topic = {
   title: [
     "커피",
@@ -39,6 +43,13 @@ export const coffee: Topic = {
       "클로버® 커피 추출 시스템",
     ],
   ],
+  subInfo: {
+    title: ["나와 어울리는 커피 찾기", "최상의 커피를 즐기는 법"],
+    titleItem: [
+      "스타벅스가 여러분에게 어울리는 커피를 찾아드립니다.",
+      "여러가지 방법을 통해 다양한 풍미의 커피를 즐겨보세요.",
+    ],
+  },
 };
 
 export const menu: Topic = {
@@ -77,6 +88,13 @@ export const menu: Topic = {
     ["실물카드", "e-Gift 카드"],
     ["나이트로 콜드브루", "콜드 브루", "스타벅스 티바나"],
   ],
+
+  subInfo: {
+    title: ["나이트로 콜드 브루"],
+    titleItem: [
+      "나이트로 커피 정통의 물결치듯 흘러내리는 캐스케이딩과 부드러운 크림을 경험하세요.",
+    ],
+  },
 };
 
 export const store: Topic = {
@@ -88,6 +106,10 @@ export const store: Topic = {
     "매장 이야기",
   ],
   titleItem: [["퀵 검색", "지역 검색"], [], [], [], ["티바나 바 매장"]],
+  subInfo: {
+    title: ["매장찾기"],
+    titleItem: ["보다 빠르게 매장을 찾아보세요."],
+  },
 };
 
 export const responsibility: Topic = {
@@ -128,6 +150,10 @@ export const starbucksRewards: Topic = {
     ],
     ["스타벅스 e-Gift Card 소개", "이용안내", "선물하기", "자주 하는 질문"],
   ],
+  subInfo: {
+    title: ["스타벅스 카드 등록하기"],
+    titleItem: ["카드 등록 후 리워드 서비스를 누리고 사용내역도 조회해보세요."],
+  },
 };
 
 export const whatsNew: Topic = {
@@ -145,4 +171,11 @@ export const whatsNew: Topic = {
     [],
     [],
   ],
+  subInfo: {
+    title: ["매장별 이벤트", "월페이퍼"],
+    titleItem: [
+      "스타벅스의 매장 이벤트 정보를 확인 하실 수 있습니다.",
+      "매월 업데이트되는 월페이퍼(PC/Mobile)로 스타벅스를 더욱 가깝게 즐겨보세요!",
+    ],
+  },
 };

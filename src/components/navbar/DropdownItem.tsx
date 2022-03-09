@@ -6,45 +6,40 @@ import {
   responsibility,
   starbucksRewards,
   whatsNew,
+  Topic,
 } from "../../dummy/DropdownContents";
 type Props = {
   dropdown: string;
 };
-type displayType = {
-  title: string[];
-  titleItem: string[][];
-};
+
 export const DropdownItem = ({ dropdown }: Props) => {
-  let display: displayType | null = null;
+  let display: Topic | null = null;
   switch (dropdown) {
-    case "coffee":
+    case "COFFEE":
       display = coffee;
       break;
-    case "menu":
+    case "MENU":
       display = menu;
       break;
-    case "store":
+    case "STORE":
       display = store;
       break;
-    case "responsibility":
+    case "RESPONSIBILITY":
       display = responsibility;
       break;
-    case "starbucksRewards":
+    case "STARBUCKS REWARDS":
       display = starbucksRewards;
       break;
-    case "whatsNew":
+    case "WHAT'S NEW":
       display = whatsNew;
       break;
     // no default
   }
 
-  const getList = (index: number) => {
-    if(!display){
-      return;
-    }
+  const getTitleItem = (index: number) => {
     return (
       <>
-        {display.titleItem[index].map((data: string, index: number) => (
+        {display!.titleItem[index].map((data: string, index: number) => (
           <Item key={index}>
             <Text>{data}</Text>
           </Item>
@@ -54,26 +49,48 @@ export const DropdownItem = ({ dropdown }: Props) => {
   };
 
   return (
-    <>
-      {display ? (
-        <>
-          {display.title.map((data: string, index: number) => (
-            <Wrapper key={index}>
+    <Wrapper>
+      <MainWrapper>
+        {display &&
+          display.title.map((data: string, index: number) => (
+            <MainContents key={index}>
               <Title>
                 <Text>{data}</Text>
               </Title>
-              {getList(index)}
-            </Wrapper>
+              {getTitleItem(index)}
+            </MainContents>
           ))}
-        </>
-      ) : (
-        ""
+      </MainWrapper>
+      {display && (
+        <SubWrapper>
+          <SubContentsWrapper>
+            {display.subInfo?.title.map((data: string, index: number) => (
+              <SubContents>
+                <SubTitle>{data}</SubTitle>
+                <SubText>{display!.subInfo?.titleItem[index]}</SubText>
+              </SubContents>
+            ))}
+          </SubContentsWrapper>
+        </SubWrapper>
       )}
-    </>
+    </Wrapper>
   );
 };
 
-const Wrapper = styled.ul`
+const Wrapper = styled.div`
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+`;
+
+const MainWrapper = styled.div`
+  display: flex;
+  flex-wrap: wrap;
+  width: 80%;
+  margin-left: 15vw;
+`;
+
+const MainContents = styled.ul`
   list-style: none;
   width: 12vw;
 `;
@@ -95,4 +112,42 @@ const Text = styled.span`
   :hover {
     text-decoration: underline;
   }
+`;
+
+const SubWrapper = styled.div`
+  background: url("	https://www.starbucks.co.kr/common/img/common/gnb_sub_txbg.jpg");
+  padding: 12px 0 12px 0;
+  width: 100%;
+  display: flex;
+`;
+
+const SubContentsWrapper = styled.div`
+  display: flex;
+  flex-direction: column;
+  width: 80%;
+  margin-left: 15vw;
+`;
+
+const SubContents = styled.ul`
+  list-style: none;
+  margin: 0;
+`;
+
+const SubTitle = styled.li`
+  display: inline-block;
+  margin-top: 10px;
+  font-size: 12px;
+  color: #999;
+  cursor: pointer;
+  :hover {
+    text-decoration: underline;
+  }
+`;
+
+const SubText = styled.li`
+  font-size: 12px;
+  color: #64a70b;
+  float: left;
+  width: 100%;
+  margin-bottom: 10px;
 `;

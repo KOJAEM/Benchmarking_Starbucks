@@ -1,8 +1,8 @@
 import styled from "@emotion/styled";
 import { useState } from "react";
-import { BottomItems } from './BottomItems';
+import { BottomItems } from "./BottomItems";
 import { DropdownContent } from "./DropdownContent";
-import { TopMenuItems } from './TopMenuItems';
+import { TopMenuItems } from "./TopMenuItems";
 export const Navbar = () => {
   const [dropdown, setDropdown] = useState("");
   return (
@@ -10,16 +10,16 @@ export const Navbar = () => {
       <Logo src="https://www.starbucks.co.kr/common/img/common/logo.png" />
       <MenuItemWrapper>
         <TopMenuItems />
-        <BottomItems setDropdown={setDropdown}/>
+        <BottomItems dropdown={dropdown} setDropdown={setDropdown} />
       </MenuItemWrapper>
-      <DropdownContent dropdown={dropdown} />
+      <DropdownContent dropdown={dropdown} setDropdown={setDropdown} />
     </Wrapper>
   );
 };
 
 const Wrapper = styled.div`
-  /* position: fixed; */
-  width:100%;
+  position: fixed;
+  width: 100%;
   display: flex;
   background-color: #f6f5ef;
   justify-content: center;
@@ -34,9 +34,8 @@ const Logo = styled.img`
 `;
 
 const MenuItemWrapper = styled.nav`
+  position: relative;
   display: flex;
   margin-left: 10vw;
   flex-direction: column;
 `;
-
-

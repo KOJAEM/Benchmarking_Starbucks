@@ -55,7 +55,7 @@ const Wrapper = styled.div`
 
 const Ul = styled.ul`
   width: 220px;
-  li:nth-child(1) {
+  li:first-of-type {
     font-size: 14px;
     line-height: 40px;
   }
