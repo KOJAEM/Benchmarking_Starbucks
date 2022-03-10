@@ -1,5 +1,5 @@
 import styled from "@emotion/styled";
-import { BottomItem } from "./BottomItem";
+import { BottomItem } from "./index";
 type Props = {
   dropdown: string;
   setDropdown: React.Dispatch<React.SetStateAction<string>>;

@@ -1,15 +1,27 @@
 import styled from '@emotion/styled';
+import { Button } from '../Atoms';
 
 export function Reserve() {
     return (
       <Wrapper>
         <Contents>
           <Title>
-            <img src="https://image.istarbucks.co.kr/upload/common/img/main/2022/reserve_2022_ethiopia_title.png" alt='title'/>
+            <img
+              src="https://image.istarbucks.co.kr/upload/common/img/main/2022/reserve_2022_ethiopia_title.png"
+              alt="title"
+            />
+            <ButtonWrapper>
+              <Button fontColor="brown" borderColor="brown" zIndex="10">
+                자세히 보기
+              </Button>
+            </ButtonWrapper>
           </Title>
-          {/* <Button>자세히 보기</Button> */}
+
           <ReserveVisual>
-              <img src='https://image.istarbucks.co.kr/upload/common/img/main/2022/reserve_2022_ethiopia_visual.jpg' alt='visual' />
+            <img
+              src="https://image.istarbucks.co.kr/upload/common/img/main/2022/reserve_2022_ethiopia_visual.jpg"
+              alt="visual"
+            />
           </ReserveVisual>
         </Contents>
       </Wrapper>
@@ -61,9 +73,9 @@ const ReserveVisual = styled.div`
   }
 `;
 
-// const Button = styled.button`
-//   position: relative;
-//   z-index: 10;
-//   margin-left: 35%;
-//   margin-top: 23px;
-// `;
+const ButtonWrapper = styled.div`
+width: 660px;
+  margin-top: 23px;
+  display:flex;
+  justify-content:center;
+`;

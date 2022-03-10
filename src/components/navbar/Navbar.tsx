@@ -1,8 +1,6 @@
 import styled from "@emotion/styled";
 import { useState } from "react";
-import { BottomItems } from "./BottomItems";
-import { DropdownContent } from "./DropdownContent";
-import { TopMenuItems } from "./TopMenuItems";
+import { BottomItems, DropdownContent, TopMenuItems } from "./index";
 export const Navbar = () => {
   const [dropdown, setDropdown] = useState("");
   return (

@@ -1,4 +1,5 @@
 import styled from "@emotion/styled";
+import { Button } from '../Atoms';
 
 export function MainVisual() {
   return (
@@ -11,7 +12,7 @@ export function MainVisual() {
           />
         </TextImageWrapper>
         <ButtonWrapper>
-          <DetailButton>자세히 보기</DetailButton>
+          <Button borderColor='pink' fontColor='pink'>자세히 보기</Button>
         </ButtonWrapper>
         <MainProducts>
           <Product1>
@@ -61,26 +62,6 @@ justify-content: center;
   top: 39%;
   left: 7px;
   width: 355px;
-`;
-
-const DetailButton = styled.button`
-  width: 129px;
-  margin: 0 auto;
-  background: transparent;
-  color: #e95a87;
-  border: 2px solid #e95a87;
-  font-size: 15px;
-  line-height: 34px;
-  border-radius: 5px;
-  text-align: center;
-  box-sizing: border-box;
-  cursor: pointer;
-  :hover {
-    transform: scale(1.01);
-  }
-  :active {
-    transform: scale(0.99);
-  }
 `;
 
 

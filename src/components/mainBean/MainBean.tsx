@@ -1,13 +1,16 @@
 import styled from '@emotion/styled';
+import { Button } from '../Atoms';
 
 export function MainBean() {
     return (
       <Wrapper>
         <Contents>
-          <BeanImage src="https://image.istarbucks.co.kr/upload/common/img/main/2022/2022_Spring_bean_1.png" />
+          <BeanImage src="https://image.istarbucks.co.kr/upload/common/img/main/2022/2022_Spring_bean_1.png" alt='bean'/>
           <Info>
-            <img src="https://image.istarbucks.co.kr/upload/common/img/main/2022/2022_Spring_bean_txt_1.png" />
-            {/* <Button>자세히 보기</Button> */}
+            <img src="https://image.istarbucks.co.kr/upload/common/img/main/2022/2022_Spring_bean_txt_1.png" alt='info'/>
+            <ButtonWrapper>
+            <Button borderColor='grey' fontColor='grey'>자세히 보기</Button>
+            </ButtonWrapper>
           </Info>
         </Contents>
       </Wrapper>
@@ -62,8 +65,7 @@ const Info = styled.div`
   z-index: 10;
 `;
 
-// const Button = styled.button`
-//     width: 125px;
-//     margin-top: 39px;
-//     height: 38px;
-// `;
+const ButtonWrapper = styled.div`
+  margin-top: 40px;
+`;
+

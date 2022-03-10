@@ -1,4 +1,5 @@
 import styled from "@emotion/styled";
+import { Button } from '../Atoms';
 
 export function Store() {
   return (
@@ -10,9 +11,9 @@ export function Store() {
         <StoreImage4 />
         <StoreText1 />
         <StoreText2 />
-        {/* <ButtonWrapper>
-          <Button>매장 찾기</Button>
-        </ButtonWrapper> */}
+        <ButtonWrapper>
+          <Button borderColor='black' fontColor='black'>매장 찾기</Button>
+        </ButtonWrapper>
       </Contents>
     </Wrapper>
   );
@@ -97,24 +98,8 @@ const StoreText2 = styled.div`
   z-index: 4;
 `;
 
-// const ButtonWrapper = styled.div`
-//   border: 2px solid #222;
-//   border-radius: 3px;
-//   height: 34px;
-//   line-height: 34px;
-//   position: absolute;
-//   right: 402px;
-//   top: 258px;
-//   width: 121px;
-//   z-index: 4;
-// `;
-
-// const Button = styled.button`
-//   color: #222;
-//   display: block;
-//   height: 100%;
-//   text-align: center;
-//   width: 100%;
-//   border: none;
-//   font-size: 15px;
-// `;
+const ButtonWrapper = styled.div`
+  position: absolute;
+  right: 402px;
+  top: 258px;
+`;

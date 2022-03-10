@@ -1,4 +1,5 @@
 import styled from "@emotion/styled";
+import { Button } from '../Atoms';
 
 export function Magazine() {
   return (
@@ -10,7 +11,9 @@ export function Magazine() {
             alt="title"
           />
         </Title>
-        {/* <Button>자세히 보기</Button> */}
+        <ButtonWrapper>
+        <Button borderColor='black' fontColor='black'>자세히 보기</Button>
+        </ButtonWrapper>
       </LeftWrapper>
       <VisualImage>
         <img
@@ -39,16 +42,9 @@ const LeftWrapper = styled.div`
 
 const Title = styled.div``;
 
-// const Button = styled.button`
-//   margin: 0 auto;
-//   width: 125px;
-//   height: 100%;
-//   color: #000;
-//   font-size: 15px;
-//   line-height: 34px;
-//   border: 2px solid #000;
-//   border-radius: 5px;
-// `;
+const ButtonWrapper = styled.div`
+  margin: 0 auto;
+`;
 
 const VisualImage = styled.div`
   margin-left: 3%;

@@ -1,5 +1,4 @@
 import styled from "@emotion/styled";
-import React from "react";
 
 export function Copyright() {
   return (
@@ -64,6 +63,7 @@ const Text = styled.div`
   }
 `;
 
+// Atom 버튼 아님
 const Button = styled.div`
   background: none;
   border: 2px solid #fff;

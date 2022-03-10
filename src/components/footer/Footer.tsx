@@ -1,7 +1,5 @@
 import styled from "@emotion/styled";
-import { Awards } from "./Awards";
-import { Copyright } from "./Copyright";
-import { Menu } from "./Menu";
+import { Menu, Awards, Copyright } from "./index";
 
 export function Footer() {
   return (

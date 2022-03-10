@@ -1,12 +1,12 @@
 import styled from "@emotion/styled";
-
+import { Button } from '../Atoms';
 export function Favorites() {
   return (
     <Wrapper>
       <LeftWrapper>
         <Slogan1></Slogan1>
         <Slogan2></Slogan2>
-        {/* <Button>자세히 보기</Button> */}
+        <ButtonWrapper><Button fontColor='white' borderColor='white'>자세히 보기</Button></ButtonWrapper>
       </LeftWrapper>
       <ImageWrapper>
         <FavoriteImage src="https://image.istarbucks.co.kr/upload/common/img/main/2022/2022_Spring_pick_img.png" alt='favorites'/>
@@ -46,10 +46,8 @@ const Slogan2 = styled.div`
   margin-top: 46px;
 `;
 
-const Button = styled.button`
+const ButtonWrapper = styled.div`
   margin-top: 44px;
-  width: 125px;
-  height: 38px;
 `;
 
 const ImageWrapper = styled.div`

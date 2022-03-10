@@ -65,7 +65,7 @@ export const DropdownItem = ({ dropdown }: Props) => {
         <SubWrapper>
           <SubContentsWrapper>
             {display.subInfo?.title.map((data: string, index: number) => (
-              <SubContents>
+              <SubContents key={index}>
                 <SubTitle>{data}</SubTitle>
                 <SubText>{display!.subInfo?.titleItem[index]}</SubText>
               </SubContents>

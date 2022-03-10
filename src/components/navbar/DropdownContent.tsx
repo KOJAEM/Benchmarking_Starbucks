@@ -1,5 +1,5 @@
 import styled from "@emotion/styled";
-import { DropdownItem } from "./DropdownItem";
+import { DropdownItem } from "./index";
 
 type Props = {
   dropdown: string;
