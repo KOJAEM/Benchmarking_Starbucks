@@ -1,18 +1,27 @@
 import styled from "@emotion/styled";
-import { Button } from '../Atoms';
+import { useEffect, useRef, useState } from "react";
+import { observe } from "../../function";
+import { Button } from "../Atoms";
 
 export function Store() {
+  const observerTarget = useRef(null);
+  const [show, setShow] = useState(false);
+  useEffect(() => {
+    observe({ setShow, observerTarget, replay: true });
+  }, []);
   return (
-    <Wrapper>
+    <Wrapper ref={observerTarget}>
       <Contents>
-        <StoreImage1 />
-        <StoreImage2 />
-        <StoreImage3 />
-        <StoreImage4 />
-        <StoreText1 />
-        <StoreText2 />
-        <ButtonWrapper>
-          <Button borderColor='black' fontColor='black'>매장 찾기</Button>
+        <StoreImage1 show={show} />
+        <StoreImage2 show={show} />
+        <StoreImage3 show={show} />
+        <StoreImage4 show={show} />
+        <StoreText1 show={show}/>
+        <StoreText2 show={show}/>
+        <ButtonWrapper show={show}>
+          <Button borderColor="black" fontColor="black">
+            매장 찾기
+          </Button>
         </ButtonWrapper>
       </Contents>
     </Wrapper>
@@ -34,7 +43,10 @@ const Contents = styled.div`
   width: 1280px;
 `;
 
-const StoreImage1 = styled.div`
+type AnimationProps = {
+  show: boolean;
+};
+const StoreImage1 = styled.div<AnimationProps>`
   background: url("https://www.starbucks.co.kr/common/img/main/store_exp_img01.png");
   height: 228px;
   left: 390px;
@@ -42,9 +54,11 @@ const StoreImage1 = styled.div`
   top: 149px;
   width: 228px;
   z-index: 5;
+  opacity: ${({ show }) => (show ? 1 : 0)};
+  transition: opacity 1500ms linear;
 `;
 
-const StoreImage2 = styled.div`
+const StoreImage2 = styled.div<AnimationProps>`
   background: url("https://www.starbucks.co.kr/common/img/main/store_exp_img02.png");
   height: 312px;
   left: 160px;
@@ -52,9 +66,11 @@ const StoreImage2 = styled.div`
   top: 0;
   width: 366px;
   z-index: 4;
+  opacity: ${({ show }) => (show ? 1 : 0)};
+  transition: opacity 1500ms linear;
 `;
 
-const StoreImage3 = styled.div`
+const StoreImage3 = styled.div<AnimationProps>`
   background: url("https://www.starbucks.co.kr/common/img/main/store_exp_img03.png");
   height: 142px;
   left: 520px;
@@ -62,9 +78,11 @@ const StoreImage3 = styled.div`
   top: -60px;
   width: 343px;
   z-index: 4;
+  opacity: ${({ show }) => (show ? 1 : 0)};
+  transition: opacity 3000ms ease;
 `;
 
-const StoreImage4 = styled.div`
+const StoreImage4 = styled.div<AnimationProps>`
   background: url("https://www.starbucks.co.kr/common/img/main/store_exp_img04.png");
   height: 102px;
   position: absolute;
@@ -72,34 +90,40 @@ const StoreImage4 = styled.div`
   top: 298px;
   width: 230px;
   z-index: 4;
+  opacity: ${({ show }) => (show ? 1 : 0)};
+  transition: opacity 3000ms ease;
 `;
 
-const StoreText1 = styled.div`
+const StoreText1 = styled.div<AnimationProps>`
   background: url("https://www.starbucks.co.kr/common/img/main/store_txt01.png");
   height: 54px;
   position: absolute;
-  right: 149px;
+  right: ${({ show }) => (show ? "149px" : "-800px")};
   overflow: hidden;
-  text-indent: -20000px;
   top: 100px;
   width: 385px;
   z-index: 4;
+  opacity: ${({ show }) => (show ? 1 : 0)};
+  transition: all 3000ms ease;
 `;
 
-const StoreText2 = styled.div`
+const StoreText2 = styled.div<AnimationProps>`
   background: url("https://www.starbucks.co.kr/common/img/main/store_txt02.png");
   height: 61px;
   position: absolute;
-  right: 168px;
+  right: ${({ show }) => (show ? "168px" : "-800px")};
   overflow: hidden;
-  text-indent: -20000px;
   top: 168px;
   width: 366px;
   z-index: 4;
+  opacity: ${({ show }) => (show ? 1 : 0)};
+  transition: all 3200ms ease;
 `;
 
-const ButtonWrapper = styled.div`
+const ButtonWrapper = styled.div<AnimationProps>`
   position: absolute;
-  right: 402px;
+  right: ${({ show }) => (show ? "402px" : "-800px")};
   top: 258px;
+  opacity: ${({ show }) => (show ? 1 : 0)};
+  transition: all 3500ms ease;
 `;
