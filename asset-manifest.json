@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/Benchmarking_Starbucks/static/css/main.073c9b0a.css",
+    "main.js": "/Benchmarking_Starbucks/static/js/main.f2a03461.js",
+    "static/js/787.06570090.chunk.js": "/Benchmarking_Starbucks/static/js/787.06570090.chunk.js",
+    "index.html": "/Benchmarking_Starbucks/index.html",
+    "main.073c9b0a.css.map": "/Benchmarking_Starbucks/static/css/main.073c9b0a.css.map",
+    "main.f2a03461.js.map": "/Benchmarking_Starbucks/static/js/main.f2a03461.js.map",
+    "787.06570090.chunk.js.map": "/Benchmarking_Starbucks/static/js/787.06570090.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.073c9b0a.css",
+    "static/js/main.f2a03461.js"
+  ]
+}
