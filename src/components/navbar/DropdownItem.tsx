@@ -49,7 +49,7 @@ export const DropdownItem = ({ dropdown }: Props) => {
   };
 
   return (
-    <Wrapper>
+    <Wrapper display={display}>
       <MainWrapper>
         {display &&
           display.title.map((data: string, index: number) => (
@@ -75,12 +75,20 @@ export const DropdownItem = ({ dropdown }: Props) => {
       )}
     </Wrapper>
   );
+}
+
+type WrapperProps = {
+  display: Topic | null;
 };
 
-const Wrapper = styled.div`
+const Wrapper = styled.div<WrapperProps>`
   display: flex;
   flex-direction: column;
   width: 100%;
+  transition: all 1000ms ease;
+  height: auto;
+  max-height: ${({ display }) => (display ? "100vh" : 0)};
+  overflow: hidden;
 `;
 
 const MainWrapper = styled.div`

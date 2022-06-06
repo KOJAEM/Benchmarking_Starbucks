@@ -7,11 +7,9 @@ type Props = {
 };
 export const DropdownContent = ({ dropdown, setDropdown }: Props) => {
   return (
-    <>
-      <Wrapper onMouseLeave={() => setDropdown("")}>
-        <DropdownItem dropdown={dropdown} />
-      </Wrapper>
-    </>
+    <Wrapper onMouseLeave={() => setDropdown("")}>
+      <DropdownItem dropdown={dropdown} />
+    </Wrapper>
   );
 };
 
