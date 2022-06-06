@@ -1,15 +1,27 @@
 {
   "files": {
     "main.css": "/Benchmarking_Starbucks/static/css/main.073c9b0a.css",
-    "main.js": "/Benchmarking_Starbucks/static/js/main.f2a03461.js",
+    "main.js": "/Benchmarking_Starbucks/static/js/main.3bc2797f.js",
+    "static/js/725.954df807.chunk.js": "/Benchmarking_Starbucks/static/js/725.954df807.chunk.js",
+    "static/js/387.60882271.chunk.js": "/Benchmarking_Starbucks/static/js/387.60882271.chunk.js",
+    "static/js/797.d827f960.chunk.js": "/Benchmarking_Starbucks/static/js/797.d827f960.chunk.js",
+    "static/js/908.ad1c9672.chunk.js": "/Benchmarking_Starbucks/static/js/908.ad1c9672.chunk.js",
+    "static/js/772.995ab0d1.chunk.js": "/Benchmarking_Starbucks/static/js/772.995ab0d1.chunk.js",
+    "static/js/521.39352552.chunk.js": "/Benchmarking_Starbucks/static/js/521.39352552.chunk.js",
     "static/js/787.06570090.chunk.js": "/Benchmarking_Starbucks/static/js/787.06570090.chunk.js",
     "index.html": "/Benchmarking_Starbucks/index.html",
     "main.073c9b0a.css.map": "/Benchmarking_Starbucks/static/css/main.073c9b0a.css.map",
-    "main.f2a03461.js.map": "/Benchmarking_Starbucks/static/js/main.f2a03461.js.map",
+    "main.3bc2797f.js.map": "/Benchmarking_Starbucks/static/js/main.3bc2797f.js.map",
+    "725.954df807.chunk.js.map": "/Benchmarking_Starbucks/static/js/725.954df807.chunk.js.map",
+    "387.60882271.chunk.js.map": "/Benchmarking_Starbucks/static/js/387.60882271.chunk.js.map",
+    "797.d827f960.chunk.js.map": "/Benchmarking_Starbucks/static/js/797.d827f960.chunk.js.map",
+    "908.ad1c9672.chunk.js.map": "/Benchmarking_Starbucks/static/js/908.ad1c9672.chunk.js.map",
+    "772.995ab0d1.chunk.js.map": "/Benchmarking_Starbucks/static/js/772.995ab0d1.chunk.js.map",
+    "521.39352552.chunk.js.map": "/Benchmarking_Starbucks/static/js/521.39352552.chunk.js.map",
     "787.06570090.chunk.js.map": "/Benchmarking_Starbucks/static/js/787.06570090.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.073c9b0a.css",
-    "static/js/main.f2a03461.js"
+    "static/js/main.3bc2797f.js"
   ]
 }
