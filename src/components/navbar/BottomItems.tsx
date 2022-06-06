@@ -3,17 +3,11 @@ import { BottomItem } from "./index";
 type Props = {
   dropdown: string;
   setDropdown: React.Dispatch<React.SetStateAction<string>>;
+  title: string[];
 };
 
-const title: string[] = [
-  "COFFEE",
-  "MENU",
-  "STORE",
-  "RESPONSIBILITY",
-  "STARBUCKS REWARDS",
-  "WHAT'S NEW",
-];
-export function BottomItems({ setDropdown, dropdown }: Props) {
+
+export function BottomItems({ setDropdown, dropdown, title }: Props) {
   return (
     <BottomMenuWrapper>
       <BottomItem dropdown={dropdown} setDropdown={setDropdown} title={title} />

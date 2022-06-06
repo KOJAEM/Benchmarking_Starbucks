@@ -1,40 +1,24 @@
 import styled from "@emotion/styled";
-import {
-  coffee,
-  menu,
-  store,
-  responsibility,
-  starbucksRewards,
-  whatsNew,
-  Topic,
-} from "../../dummy/DropdownContents";
+import { useCallback, useEffect, useState } from "react";
+import { Topic } from '../../types/Topic.type';
 type Props = {
+  title: string;
   dropdown: string;
 };
 
-export const DropdownItem = ({ dropdown }: Props) => {
-  let display: Topic | null = null;
-  switch (dropdown) {
-    case "COFFEE":
-      display = coffee;
-      break;
-    case "MENU":
-      display = menu;
-      break;
-    case "STORE":
-      display = store;
-      break;
-    case "RESPONSIBILITY":
-      display = responsibility;
-      break;
-    case "STARBUCKS REWARDS":
-      display = starbucksRewards;
-      break;
-    case "WHAT'S NEW":
-      display = whatsNew;
-      break;
-    // no default
-  }
+export const DropdownItem = ({ title, dropdown }: Props) => {
+  const titleName = title.replace(/'/gi, "").replace(/ /gi, "").toLowerCase();
+
+  const [display, setDisplay] = useState<Topic>();
+
+  const loadData = useCallback(async () => {
+    const { data } = await import(`../../dummy/${titleName}`);
+    setDisplay(data);
+  }, [titleName]);
+
+  useEffect(() => {
+    loadData();
+  }, [loadData]);
 
   const getTitleItem = (index: number) => {
     return (
@@ -49,7 +33,7 @@ export const DropdownItem = ({ dropdown }: Props) => {
   };
 
   return (
-    <Wrapper display={display}>
+    <Wrapper title={title} dropdown={dropdown}>
       <MainWrapper>
         {display &&
           display.title.map((data: string, index: number) => (
@@ -75,20 +59,19 @@ export const DropdownItem = ({ dropdown }: Props) => {
       )}
     </Wrapper>
   );
-}
-
-type WrapperProps = {
-  display: Topic | null;
 };
-
+type WrapperProps = {
+  title: string;
+  dropdown: string;
+};
 const Wrapper = styled.div<WrapperProps>`
   display: flex;
   flex-direction: column;
   width: 100%;
-  transition: all 1000ms ease;
   height: auto;
-  max-height: ${({ display }) => (display ? "100vh" : 0)};
+  max-height: ${({ title, dropdown }) => (title === dropdown ? "100vh" : 0)};
   overflow: hidden;
+  transition: max-height 1200ms ease;
 `;
 
 const MainWrapper = styled.div`

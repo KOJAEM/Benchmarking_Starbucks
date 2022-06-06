@@ -2,18 +2,28 @@ import styled from "@emotion/styled";
 import { DropdownItem } from "./index";
 
 type Props = {
-  dropdown: string;
+  title: string;
   setDropdown: React.Dispatch<React.SetStateAction<string>>;
+  dropdown : string;
 };
-export const DropdownContent = ({ dropdown, setDropdown }: Props) => {
+export const DropdownContent = ({ title, setDropdown, dropdown }: Props) => {
   return (
-    <Wrapper onMouseLeave={() => setDropdown("")}>
-      <DropdownItem dropdown={dropdown} />
+    <Wrapper
+      onMouseLeave={() => setDropdown("")}
+      dropdown={dropdown}
+      title={title}
+    >
+      <DropdownItem title={title} dropdown={dropdown} />
     </Wrapper>
   );
 };
 
-const Wrapper = styled.div`
+type WrapperProps = {
+  dropdown : string;
+  title: string;
+}
+const Wrapper = styled.div<WrapperProps>`
+  opacity: ${({ dropdown, title }) => (dropdown === title ? 1 : 0)};
   width: 100%;
   background-color: #2c2a29;
   position: absolute;
